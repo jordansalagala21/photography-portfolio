@@ -4,7 +4,7 @@ let currentLang = localStorage.getItem('lang') === 'fr' ? 'fr' : 'en';
 // ============ Preloader ============
 window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
-  setTimeout(() => preloader.classList.add('hidden'), 400);
+  setTimeout(() => preloader.classList.add('hidden'), 4000);
 });
 
 // ============ Footer Year ============
