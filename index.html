@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ava Lens - Photography Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <span>AVA LENS</span>
+</div>
+
+<!-- Navigation -->
+<header class="site-header" id="siteHeader">
+  <nav class="navbar">
+    <a href="#home" class="logo">Ava<span>Lens</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-i18n="navHome">Home</a></li>
+      <li><a href="#gallery" class="nav-link" data-i18n="navGallery">Gallery</a></li>
+      <li><a href="#about" class="nav-link" data-i18n="navAbout">About</a></li>
+      <li><a href="#contact" class="nav-link" data-i18n="navContact">Contact</a></li>
+      <li><button class="lang-toggle" id="langToggle" aria-label="Switch language">FR</button></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-i18n="heroEyebrow">Photography Student - Portfolio 2026</p>
+    <h1 class="hero-title"><span data-i18n="heroTitleLine1">Seeing light,</span><br><span data-i18n="heroTitleLine2">telling stories.</span></h1>
+    <p class="hero-sub" data-i18n="heroSub">Portrait &amp; documentary photography exploring quiet moments and natural light.</p>
+    <a href="#gallery" class="btn btn-primary" data-i18n="heroBtn">View Gallery</a>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="gallery-section">
+  <div class="section-heading">
+    <p class="section-tag" data-i18n="gallerySectionTag">Selected Work</p>
+    <h2 data-i18n="gallerySectionTitle">Gallery</h2>
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+    <button class="filter-btn" data-filter="portrait" data-i18n="filterPortrait">Portrait</button>
+    <button class="filter-btn" data-filter="landscape" data-i18n="filterLandscape">Landscape</button>
+    <button class="filter-btn" data-filter="street" data-i18n="filterStreet">Street</button>
+    <button class="filter-btn" data-filter="bw" data-i18n="filterBw">Black &amp; White</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<!-- About -->
+<section id="about" class="about-section">
+  <div class="about-image">
+    <div class="about-image-inner"></div>
+  </div>
+  <div class="about-content">
+    <p class="section-tag" data-i18n="aboutTag">About Me</p>
+    <h2 data-i18n="aboutTitle">Hi, I'm Ava.</h2>
+    <p class="about-text" data-i18n="aboutText1">
+      I'm a third-year photography student focused on portrait and documentary work.
+      My practice centers on natural light, honest expressions, and the in-between
+      moments that usually go unnoticed. I'm currently building my technical range
+      across film and digital while developing a personal visual language rooted
+      in stillness and quiet observation.
+    </p>
+    <p class="about-text" data-i18n="aboutText2">
+      When I'm not shooting, I'm assisting on local shoots, printing in the
+      darkroom, or scouting new locations around the city.
+    </p>
+
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-label"><span data-i18n="skill1">Portrait Photography</span><span>90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label"><span data-i18n="skill2">Photo Editing (Lightroom / Photoshop)</span><span>85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label"><span data-i18n="skill3">Film Development</span><span>70%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label"><span data-i18n="skill4">Studio Lighting</span><span>75%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><h3 data-count="45">0</h3><p data-i18n="stat1">Shoots Completed</p></div>
+      <div class="stat"><h3 data-count="12">0</h3><p data-i18n="stat2">Exhibitions</p></div>
+      <div class="stat"><h3 data-count="3">0</h3><p data-i18n="stat3">Years Shooting</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact-section">
+  <div class="section-heading">
+    <p class="section-tag" data-i18n="contactTag">Get In Touch</p>
+    <h2 data-i18n="contactTitle">Let's Work Together</h2>
+  </div>
+
+  <div class="contact-wrap">
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name" data-i18n="labelName">Name</label>
+          <input type="text" id="name" name="name" required>
+          <span class="error-msg" data-i18n="errorName">Please enter your name</span>
+        </div>
+        <div class="form-group">
+          <label for="email" data-i18n="labelEmail">Email</label>
+          <input type="email" id="email" name="email" required>
+          <span class="error-msg" data-i18n="errorEmail">Please enter a valid email</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject" data-i18n="labelSubject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+        <span class="error-msg" data-i18n="errorSubject">Please enter a subject</span>
+      </div>
+      <div class="form-group">
+        <label for="message" data-i18n="labelMessage">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <span class="error-msg" data-i18n="errorMessage">Please enter a message</span>
+      </div>
+      <button type="submit" class="btn btn-primary" data-i18n="btnSend">Send Message</button>
+      <p class="form-success" id="formSuccess" data-i18n="formSuccess">Thanks! Your message has been sent.</p>
+    </form>
+
+    <div class="contact-info">
+      <div class="info-item">
+        <h4 data-i18n="infoEmail">Email</h4>
+        <p>hello@avalens.com</p>
+      </div>
+      <div class="info-item">
+        <h4 data-i18n="infoLocation">Location</h4>
+        <p>Providence, Rhode Island</p>
+      </div>
+      <div class="info-item">
+        <h4 data-i18n="infoFollow">Follow</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Behance">Behance</a>
+          <a href="#" aria-label="500px">500px</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Ava Lens. <span data-i18n="footerRights">All rights reserved.</span></p>
+  <a href="#home" class="back-to-top" data-i18n="backToTop">Back to top ↑</a>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#10094;</button>
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#10095;</button>
+  <div class="lightbox-content">
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
